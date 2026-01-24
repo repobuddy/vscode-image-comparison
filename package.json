@@ -1,0 +1,36 @@
+{
+  "name": "vscode-image-comparison",
+  "displayName": "Image Comparison",
+  "description": "Compare two images with a draggable slider.",
+  "version": "0.0.1",
+  "publisher": "unional",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:imageComparison.compareImages"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "imageComparison.compareImages",
+        "title": "Image Comparison: Compare Two Images"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@10.28.1"
+}
