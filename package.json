@@ -7,12 +7,13 @@
 		"Other"
 	],
 	"publisher": "unional",
+	"type": "module",
 	"main": "./dist/extension.js",
 	"scripts": {
 		"build-storybook": "storybook build",
 		"check": "biome check",
 		"check:fix": "biome check --fix",
-		"compile": "tsc -p ./",
+		"compile": "tsc -p ./tsconfig.build.json",
 		"prepare": "husky install",
 		"storybook": "storybook dev -p 6006",
 		"vscode:prepublish": "npm run compile",
@@ -25,6 +26,9 @@
 				"title": "Image Comparison: Compare Two Images"
 			}
 		]
+	},
+	"dependencies": {
+		"pathe": "^2.0.3"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.12",

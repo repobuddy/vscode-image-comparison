@@ -1,4 +1,4 @@
-import * as path from 'node:path'
+import * as path from 'pathe'
 import * as vscode from 'vscode'
 import { getNonce } from '../security/security.util.ts'
 import type { ImagePair } from './compare-images.types.ts'

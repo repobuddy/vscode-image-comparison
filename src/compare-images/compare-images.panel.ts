@@ -1,4 +1,4 @@
-import * as path from 'node:path'
+import * as path from 'pathe'
 import * as vscode from 'vscode'
 import type { ImagePair } from './compare-images.types.ts'
 import { getWebviewContent } from './compare-images.webview.ts'
