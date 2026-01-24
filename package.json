@@ -1,16 +1,21 @@
 {
 	"name": "vscode-image-comparison",
 	"displayName": "Image Comparison",
-	"description": "Compare two images with a draggable slider.",
 	"version": "0.0.1",
-	"publisher": "unional",
-	"engines": {
-		"vscode": "^1.90.0"
-	},
+	"description": "Compare two images with a draggable slider.",
 	"categories": [
 		"Other"
 	],
+	"publisher": "unional",
 	"main": "./dist/extension.js",
+	"scripts": {
+		"check": "biome check",
+		"check:fix": "biome check --fix",
+		"compile": "tsc -p ./",
+		"prepare": "husky install",
+		"vscode:prepublish": "npm run compile",
+		"watch": "tsc -watch -p ./"
+	},
 	"contributes": {
 		"commands": [
 			{
@@ -19,19 +24,18 @@
 			}
 		]
 	},
-	"scripts": {
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"check": "biome check",
-		"check:fix": "biome check --fix",
-		"vscode:prepublish": "npm run compile"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.12",
+		"@commitlint/cli": "^20.3.1",
+		"@commitlint/config-conventional": "^20.3.1",
 		"@repobuddy/biome": "^2.3.0",
 		"@types/node": "^20.11.30",
 		"@types/vscode": "^1.90.0",
+		"husky": "^9.1.7",
 		"typescript": "^5.4.5"
 	},
-	"packageManager": "pnpm@10.28.1"
+	"packageManager": "pnpm@10.28.1",
+	"engines": {
+		"vscode": "^1.90.0"
+	}
 }
