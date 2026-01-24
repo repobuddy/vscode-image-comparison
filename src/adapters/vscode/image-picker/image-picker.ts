@@ -1,5 +1,5 @@
 import * as vscode from 'vscode'
-import type { ImagePair } from '../compare-images/compare-images.types.ts'
+import type { ImagePair } from '../../../core/compare-images/compare-images.types.ts'
 
 export async function pickTwoImages(): Promise<ImagePair | null> {
 	const firstImage = await pickImage('Select the first image')
@@ -15,7 +15,7 @@ export async function pickTwoImages(): Promise<ImagePair | null> {
 	return [firstImage, secondImage]
 }
 
-async function pickImage(label: string): Promise<vscode.Uri | null> {
+async function pickImage(label: string): Promise<string | null> {
 	const selection = await vscode.window.showOpenDialog({
 		canSelectMany: false,
 		openLabel: label,
@@ -28,5 +28,5 @@ async function pickImage(label: string): Promise<vscode.Uri | null> {
 		return null
 	}
 
-	return selection[0]
+	return selection[0].fsPath
 }

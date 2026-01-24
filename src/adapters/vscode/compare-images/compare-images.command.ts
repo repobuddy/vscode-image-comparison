@@ -1,6 +1,6 @@
 import * as vscode from 'vscode'
-import { pickTwoImages } from '../image-picker/image-picker.service.ts'
-import { ImageComparePanel } from './compare-images.panel.ts'
+import { pickTwoImages } from '../image-picker/image-picker.ts'
+import { createOrShowImageComparePanel } from './compare-images.panel.ts'
 
 export function registerCompareImagesCommand(context: vscode.ExtensionContext): void {
 	const command = vscode.commands.registerCommand('imageComparison.compareImages', async () => {
@@ -9,7 +9,7 @@ export function registerCompareImagesCommand(context: vscode.ExtensionContext): 
 			return
 		}
 
-		await ImageComparePanel.createOrShow(context.extensionUri, images)
+		await createOrShowImageComparePanel(context.extensionUri, images)
 	})
 
 	context.subscriptions.push(command)
