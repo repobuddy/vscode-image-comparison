@@ -1,9 +1,6 @@
 {
 	"name": "vscode_image_comparison",
 	"private": true,
-	"workspaces": [
-		"apps/*"
-	],
 	"scripts": {
 		"build": "turbo run build",
 		"build-storybook": "turbo run build-storybook",
