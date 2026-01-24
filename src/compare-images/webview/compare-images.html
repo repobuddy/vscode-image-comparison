@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; img-src {{cspSource}} file: data:; style-src {{cspSource}}; script-src 'nonce-{{nonce}}';"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Comparison</title>
+    <link rel="stylesheet" href="{{styleUri}}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-compare" id="compare">
+        <img src="{{leftImage}}" alt="Left image" />
+        <div class="image-overlay" id="overlay">
+          <img src="{{rightImage}}" alt="Right image" />
+        </div>
+      </div>
+      <input
+        class="slider"
+        id="slider"
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        aria-label="Image comparison slider"
+      />
+      <div class="labels">
+        <span>{{leftLabel}}</span>
+        <span>{{rightLabel}}</span>
+      </div>
+    </div>
+    <script src="{{scriptUri}}" nonce="{{nonce}}"></script>
+  </body>
+</html>
