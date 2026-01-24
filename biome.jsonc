@@ -12,8 +12,7 @@
 		"includes": ["!**/node_modules/", "!**/.vscode/**/*.txt", "!**/.dist", "!**/*.code-workspace"]
 	},
 	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab"
+		"enabled": true
 	},
 	"linter": {
 		"rules": {
@@ -24,13 +23,7 @@
 			},
 			"correctness": {
 				"useImportExtensions": "error"
-			},
-			"suspicious": {
-				"noArrayIndexKey": "off"
 			}
 		}
-	},
-	"javascript": {
-		"jsxRuntime": "reactClassic"
 	}
 }
