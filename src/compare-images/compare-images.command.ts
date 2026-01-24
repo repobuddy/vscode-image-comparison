@@ -1,21 +1,16 @@
-import * as vscode from "vscode";
-import { pickTwoImages } from "../image-picker/image-picker.service";
-import { ImageComparePanel } from "./compare-images.panel";
+import * as vscode from 'vscode'
+import { pickTwoImages } from '../image-picker/image-picker.service.ts'
+import { ImageComparePanel } from './compare-images.panel.ts'
 
-export function registerCompareImagesCommand(
-  context: vscode.ExtensionContext
-): void {
-  const command = vscode.commands.registerCommand(
-    "imageComparison.compareImages",
-    async () => {
-      const images = await pickTwoImages();
-      if (!images) {
-        return;
-      }
+export function registerCompareImagesCommand(context: vscode.ExtensionContext): void {
+	const command = vscode.commands.registerCommand('imageComparison.compareImages', async () => {
+		const images = await pickTwoImages()
+		if (!images) {
+			return
+		}
 
-      await ImageComparePanel.createOrShow(context.extensionUri, images);
-    }
-  );
+		await ImageComparePanel.createOrShow(context.extensionUri, images)
+	})
 
-  context.subscriptions.push(command);
+	context.subscriptions.push(command)
 }

@@ -1,20 +1,15 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "lib": [
-      "ES2020",
-      "DOM"
-    ],
-    "rootDir": "src",
-    "outDir": "dist",
-    "sourceMap": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
-  },
-  "exclude": [
-    "node_modules",
-    ".vscode-test"
-  ]
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"lib": ["ES2020", "DOM"],
+		"module": "commonjs",
+		"outDir": "dist",
+		"rewriteRelativeImportExtensions": true,
+		"rootDir": "src",
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"target": "ES2020"
+	},
+	"exclude": ["node_modules", ".vscode-test"]
 }
