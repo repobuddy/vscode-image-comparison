@@ -9,10 +9,12 @@
 	"publisher": "unional",
 	"main": "./dist/extension.js",
 	"scripts": {
+		"build-storybook": "storybook build",
 		"check": "biome check",
 		"check:fix": "biome check --fix",
 		"compile": "tsc -p ./",
 		"prepare": "husky install",
+		"storybook": "storybook dev -p 6006",
 		"vscode:prepublish": "npm run compile",
 		"watch": "tsc -watch -p ./"
 	},
@@ -29,10 +31,22 @@
 		"@commitlint/cli": "^20.3.1",
 		"@commitlint/config-conventional": "^20.3.1",
 		"@repobuddy/biome": "^2.3.0",
+		"@storybook/addon-a11y": "^10.2.0",
+		"@storybook/addon-docs": "^10.2.0",
+		"@storybook/addon-vitest": "^10.2.0",
+		"@storybook/react-vite": "^10.2.0",
 		"@types/node": "^20.11.30",
+		"@types/react": "^19.2.9",
 		"@types/vscode": "^1.90.0",
+		"@vitest/browser-playwright": "^4.0.18",
+		"@vitest/coverage-v8": "^4.0.18",
 		"husky": "^9.1.7",
-		"typescript": "^5.4.5"
+		"playwright": "^1.58.0",
+		"react": "^19.2.3",
+		"react-dom": "^19.2.3",
+		"storybook": "^10.2.0",
+		"typescript": "^5.4.5",
+		"vitest": "^4.0.18"
 	},
 	"packageManager": "pnpm@10.28.1",
 	"engines": {
