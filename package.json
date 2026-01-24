@@ -1,9 +1,12 @@
 {
 	"name": "vscode_image_comparison",
 	"private": true,
+	"workspaces": [
+		"apps/*"
+	],
 	"scripts": {
-		"build-storybook": "turbo run build-storybook",
 		"build": "turbo run build",
+		"build-storybook": "turbo run build-storybook",
 		"check": "biome check",
 		"check:fix": "biome check --fix",
 		"coverage": "turbo run coverage",
@@ -12,14 +15,14 @@
 		"test": "turbo run test",
 		"watch": "turbo run watch --parallel"
 	},
-	"workspaces": [
-		"apps/*"
-	],
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.12",
 		"@commitlint/cli": "^20.3.1",
 		"@commitlint/config-conventional": "^20.3.1",
 		"@repobuddy/biome": "^2.3.0",
+		"@types/node": "^20.11.30",
+		"@types/react": "^19.2.9",
+		"@types/vscode": "^1.90.0",
 		"husky": "^9.1.7",
 		"turbo": "^2.7.5"
 	},
