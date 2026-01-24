@@ -9,6 +9,10 @@
 			"dependsOn": ["^check"],
 			"outputs": []
 		},
+		"coverage": {
+			"dependsOn": ["^build"],
+			"outputs": ["coverage/**"]
+		},
 		"storybook": {
 			"cache": false,
 			"persistent": true
@@ -16,6 +20,10 @@
 		"build-storybook": {
 			"dependsOn": ["^build-storybook"],
 			"outputs": ["storybook-static/**"]
+		},
+		"test": {
+			"dependsOn": ["^build"],
+			"outputs": []
 		},
 		"watch": {
 			"cache": false,
